@@ -54,6 +54,32 @@ Resume screening tools often provide a rank without showing how it was produced.
 
 ![Score Breakdown](docs/screenshots/score-breakdown.jpg)
 
+---
+
+## 📄 Sample Generated Report
+
+The application automatically generates a detailed recruiter-friendly PDF report containing:
+
+- Candidate rankings
+
+- Final Score
+
+- Conceptual Match
+
+- Required Skills Match
+
+- Strengths and Improvement Areas
+
+- Missing Requirements
+
+- Explainable Score Breakdown
+
+📥 Download the sample report
+
+[📄 Sample Resume Ranking Report](docs/sample-report.pdf)
+
+---
+
 ## System Architecture
 
 ```mermaid
