@@ -36,37 +36,43 @@ Resume screening tools often provide a rank without showing how it was produced.
 - Surface malformed-file and low-text-density warnings without silently ranking unusable documents.
 - Process uploaded files in memory without application-level document persistence.
 
-## Example Output
+## 📸 Application Preview
 
-The following assets are reserved for real screenshots captured from the working application. No generated or mock screenshots are included.
+### 🏠 Home Page
 
-| View | Future screenshot |
-|---|---|
-| Home Page | `docs/screenshots/home-page.png` |
-| Upload Documents | `docs/screenshots/upload-documents.png` |
-| Ranking Results | `docs/screenshots/ranking-results.png` |
-| Candidate Details | `docs/screenshots/candidate-details.png` |
-| PDF Report | `docs/screenshots/pdf-report.png` |
+![Home Page](docs/screenshots/home.jpg)
+
+---
+
+### 📊 Ranking Results
+
+![Ranking Results](docs/screenshots/ranking-results.jpg)
+
+---
+
+### 📈 Score Breakdown
+
+![Score Breakdown](docs/screenshots/score-breakdown.jpg)
 
 ## System Architecture
 
 ```mermaid
 flowchart LR
-    JD[Job description] --> JX[JD text extraction]
-    JX --> GR[Groq requirement extraction]
-    GR --> PV[Pydantic validation]
-    CV[Resumes] --> RX[Resume text extraction]
-    RX --> SE[Resume sectioning]
-    PV --> EM[Requirement embedding]
-    SE --> RE[Section embeddings]
-    EM --> FS[FAISS cosine search]
-    RE --> FS
-    PV --> DM[Deterministic evidence matching]
-    SE --> DM
-    FS --> SC[Weighted scoring engine]
-    DM --> SC
-    SC --> UI[Streamlit results]
-    SC --> PDF[PDF report]
+JD[Job description] --> JX[JD text extraction]
+JX --> GR[Groq requirement extraction]
+GR --> PV[Pydantic validation]
+CV[Resumes] --> RX[Resume text extraction]
+RX --> SE[Resume sectioning]
+PV --> EM[Requirement embedding]
+SE --> RE[Section embeddings]
+EM --> FS[FAISS cosine search]
+RE --> FS
+PV --> DM[Deterministic evidence matching]
+SE --> DM
+FS --> SC[Weighted scoring engine]
+DM --> SC
+SC --> UI[Streamlit results]
+SC --> PDF[PDF report]
 ```
 
 Groq is restricted to requirement extraction. It does not assign candidate scores or determine the final ranking. Only job-description text is sent to Groq; resume parsing, embedding generation, evidence matching, and scoring run within the application environment. See [Architecture and Design Decisions](docs/architecture.md) for additional context.
@@ -91,28 +97,28 @@ Groq is restricted to requirement extraction. It does not assign candidate score
 
 ```text
 semantic-resume-ranking-system/
-├── .github/workflows/ci.yml      # Lint and test workflow
-├── .streamlit/config.toml        # Streamlit theme and upload configuration
-├── app/streamlit_app.py          # Presentation layer
+├── .github/workflows/ci.yml # Lint and test workflow
+├── .streamlit/config.toml # Streamlit theme and upload configuration
+├── app/streamlit_app.py # Presentation layer
 ├── docs/
-│   ├── screenshots/             # Future application screenshots
-│   ├── architecture.md          # Architecture and design decisions
-│   └── interview_guide.md       # Technical interview preparation
+│ ├── screenshots/ # Future application screenshots
+│ ├── architecture.md # Architecture and design decisions
+│ └── interview_guide.md # Technical interview preparation
 ├── src/
-│   ├── config/                   # Environment-backed settings
-│   ├── document_processing/      # Extraction and resume sectioning
-│   ├── domain/                   # Pydantic domain models
-│   ├── embeddings/               # Sentence Transformer adapter
-│   ├── llm/                      # Groq requirement extraction
-│   ├── ranking/                  # Matching and deterministic scoring
-│   ├── reporting/                # PDF report generation
-│   ├── search/                   # FAISS cosine index
-│   ├── utils/                    # Shared text utilities
-│   └── service.py                # Analysis workflow orchestration
-├── tests/                        # Unit tests
-├── .env.example                  # Safe configuration template
-├── pyproject.toml                # Package metadata and tooling configuration
-└── requirements.txt              # Runtime dependencies
+│ ├── config/ # Environment-backed settings
+│ ├── document_processing/ # Extraction and resume sectioning
+│ ├── domain/ # Pydantic domain models
+│ ├── embeddings/ # Sentence Transformer adapter
+│ ├── llm/ # Groq requirement extraction
+│ ├── ranking/ # Matching and deterministic scoring
+│ ├── reporting/ # PDF report generation
+│ ├── search/ # FAISS cosine index
+│ ├── utils/ # Shared text utilities
+│ └── service.py # Analysis workflow orchestration
+├── tests/ # Unit tests
+├── .env.example # Safe configuration template
+├── pyproject.toml # Package metadata and tooling configuration
+└── requirements.txt # Runtime dependencies
 ```
 
 See the [Architecture and Design Decisions](docs/architecture.md) and [Technical Interview Guide](docs/interview_guide.md) for deeper implementation context.
@@ -219,13 +225,13 @@ Conceptual Match can recognize related responsibilities even when wording differ
 
 ```text
 Final Score = 30% Conceptual Match
-            + 25% required skill coverage
-            + 12% experience match
-            +  8% preferred skill coverage
-            +  8% project relevance
-            +  7% education match
-            +  5% certification match
-            +  5% lexical overlap
++ 25% required skill coverage
++ 12% experience match
++ 8% preferred skill coverage
++ 8% project relevance
++ 7% education match
++ 5% certification match
++ 5% lexical overlap
 ```
 
 The weights are transparent defaults, not validated hiring policy. They should be calibrated against recruiter-labeled evaluation data before production use.
@@ -244,7 +250,7 @@ The weights are transparent defaults, not validated hiring policy. They should b
 
 - Image-only or scanned PDFs require OCR, which is not implemented.
 - Resume section detection is heuristic and may miss unconventional layouts.
-- Experience estimation primarily uses explicit statements such as “3 years” rather than reconstructing employment date ranges.
+- Experience estimation primarily uses explicit statements such as "3 years" rather than reconstructing employment date ranges.
 - Skill aliases are intentionally limited and are not a complete, versioned skill ontology.
 - The default scoring weights have not been calibrated on recruiter-labeled outcomes.
 - Extracted `preferred_years` and `nice_to_have` fields are not separate scoring signals.
