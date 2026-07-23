@@ -40,7 +40,7 @@ Resume screening tools often provide a rank without showing how it was produced.
 
 ### 🏠 Home Page
 
-![Home Page](docs/screenshots/home.jpg)
+[Home Page](docs/screenshots/home.jpg)
 
 ---
 
