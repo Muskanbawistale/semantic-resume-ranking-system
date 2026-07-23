@@ -19,7 +19,7 @@ An explainable, section-aware application that ranks resumes against a job descr
 
 Replace the placeholder with the public deployment URL before publishing the repository.
 
-## Motivation
+## Motivations
 
 Resume screening tools often provide a rank without showing how it was produced. Keyword-only systems can miss relevant experience expressed in different language, while fully LLM-generated rankings can be difficult to reproduce, test, or audit. This project separates understanding from decision-making: the LLM extracts requirements, local embeddings compare meaning and context, and transparent code calculates every score.
 
