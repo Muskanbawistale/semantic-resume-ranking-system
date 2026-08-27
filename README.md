@@ -26,7 +26,7 @@ Resume screening tools often provide a rank without showing how it was produced.
 ## Features
 
 - Upload one job description in PDF, DOCX, or TXT format and multiple resumes in PDF or DOCX format.
-- Extract the job title, skill, tools, experience, education, certifications, responsibilities, and domains into a validated schema.
+- Extract the job title, skills, tools, experience, education, certifications, responsibilities, and domains into a validated schema.
 - Parse resumes into summary, skills, experience, projects, education, certification, and other sections.
 - Calculate section-aware Conceptual Match using local Sentence Transformer embeddings and exact FAISS cosine search.
 - Match skills and tools with case-insensitive, boundary-aware patterns and a focused alias layer.
