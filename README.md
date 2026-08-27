@@ -296,7 +296,7 @@ The weights are transparent defaults, not validated hiring policy. They should b
 
 ## License
 
-This project is available under the [MIT License](LICENSE).
+This project is available under the [MIT License](LICENSE)
 
 ## Why This Project Is Different
 
