@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/Muskanbawistale/semantic-resume-ranking-system/actions/workflows/ci.yml/badge.svg)](https://github.com/Muskanbawistale/semantic-resume-ranking-system/actions/workflows/ci.yml)
 
-## Overview
+## Overview ##
 
 An explainable, section-aware application that ranks resumes against a job description. It uses Groq to extract structured hiring requirements, Sentence Transformers and FAISS to measure contextual alignment, and a deterministic scoring engine to combine semantic and evidence-based signals into an auditable Final Score.
 
