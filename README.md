@@ -80,7 +80,7 @@ The application automatically generates a detailed recruiter-friendly PDF report
 
 ---
 
-## System Architecture
+## System Architectue
 
 ```mermaid
 flowchart LR
