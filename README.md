@@ -15,9 +15,9 @@ An explainable, section-aware application that ranks resumes against a job descr
 
 ## Live Demo
 
-> **Deployment placeholder:(https://semantic-resume-ranking-system.streamlit.app/)
+**[semantic-resume-ranking-system.streamlit.app](https://semantic-resume-ranking-system.streamlit.app/)**
 
-Replace the placeholder with the public deployment URL before publishing the repository.
+The app may take ~30s to wake if it has been idle.
 
 ## Motivation
 
@@ -127,7 +127,7 @@ semantic-resume-ranking-system/
 ├── .streamlit/config.toml # Streamlit theme and upload configuration
 ├── app/streamlit_app.py # Presentation layer
 ├── docs/
-│ ├── screenshots/ # Future application screenshots
+│ ├── screenshots/ # Application screenshots
 │ ├── architecture.md # Architecture and design decisions
 │ └── interview_guide.md # Technical interview preparation
 ├── src/
