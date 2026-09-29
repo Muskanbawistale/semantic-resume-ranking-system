@@ -21,7 +21,7 @@ The app may take ~30s to wake if it has been idle.
 
 ## Motivation
 
-Resume screening tools often provide a rank without showing how it was produced. Keyword-only systems can miss relevant experience expressed in different language, while fully LLM-generated rankings can be difficult to reproduce, test, or audit. This project separates understanding from decision-making: the LLM extracts requirements, local embeddings compare meaning and context, and transparent code calculates every score.
+Resume screening tools often provide a rank without showing how itwas produced. Keyword-only systems can miss relevant experience expressed in different language, while fully LLM-generated rankings can be difficult to reproduce, test, or audit. This project separates understanding from decision-making: the LLM extracts requirements, local embeddings compare meaning and context, and transparent code calculates every score.
 
 ## Features
 
