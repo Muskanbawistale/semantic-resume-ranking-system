@@ -11,7 +11,7 @@
 
 An explainable, section-aware application that ranks resumes against a job description. It uses Groq to extract structured hiring requirements, Sentence Transformers and FAISS to measure contextual alignment, and a deterministic scoring engine to combine semantic and evidence-based signals into an auditable Final Score.
 
-> **Responsible-use note:** This project is decision-support software, not an autonomous hiring system. Candidate rankings should always be reviewed by people and evaluated for bias before real-world use.
+> **Responsible-use note:** This project is decision-support software not an autonomous hiring system. Candidate rankings should always be reviewed by people and evaluated for bias before real-world use.
 
 ## Live Demo
 
