@@ -1,6 +1,6 @@
 # Semantic Resume Ranking System
 
-*Explainable, section-aware resume ranking with semantic understanding and deterministic evidence scoring.*
+*Explainable, section-aware resume ranking with semantic understanding and deterministic evidence scoring.
 
 [![Python](https://img.shields.io/badge/Python-3.10--3.12-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.49%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
